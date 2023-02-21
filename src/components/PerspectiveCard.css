@@ -1,0 +1,5 @@
+.perspective-card {
+  transform-style: preserve-3d;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.3, 1, 0.2, 1);
+}
