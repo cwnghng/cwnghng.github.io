@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/456.023d8c07.chunk.css","mappings":"AAAA,kBACE,mCAA4B,CAA5B,2BAA4B,CAC5B,uBAAyB,CACzB,kDACF","sources":["components/PerspectiveCard.css"],"sourcesContent":[".perspective-card {\n  transform-style: preserve-3d;\n  transition-duration: 0.2s;\n  transition-timing-function: cubic-bezier(0.3, 1, 0.2, 1);\n}"],"names":[],"sourceRoot":""}
