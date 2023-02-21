@@ -4,15 +4,16 @@ import './PerspectiveCard.css';
 interface PerspectiveCardProps {
   maxAngle?: number,
   maxScale?: number,
+  children: any,
 }
 
-const defaultProps: PerspectiveCardProps = {
-  maxAngle: 20,
+const defaultProps = {
+  maxAngle: 18,
   maxScale: 1.05,
 };
 
 function PerspectiveCard(props: PerspectiveCardProps) {
-  const { maxAngle, maxScale } = props;
+  const { maxAngle, maxScale, children } = props;
 
   const cardRef = useRef<HTMLInputElement>(null);
   const boundRef = useRef<HTMLInputElement>(null);
@@ -44,14 +45,13 @@ function PerspectiveCard(props: PerspectiveCardProps) {
 
   return (
     <div
-      className="perspective-bound h-40 w-40 m-1"
       style={{
-        perspective: '500px'
+        perspective: '1000px'
       }}
       ref={boundRef}
     >
       <div
-        className="perspective-card bg-red-500 h-full w-full transition-all"
+        className="perspective-card h-full w-full transition-all"
         onMouseEnter={() => setScale(maxScale!)}
         onMouseMove={(e) => handleMouseMove(e)}
         onMouseLeave={() => handleMouseLeave()}
@@ -60,7 +60,7 @@ function PerspectiveCard(props: PerspectiveCardProps) {
         }}
         ref={cardRef}
       >
-        Test
+        {children}
       </div>
     </div>
   );
