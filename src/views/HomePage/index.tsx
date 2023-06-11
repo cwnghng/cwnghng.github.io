@@ -1,5 +1,5 @@
-const HomePage = () => {
-  return <>Resume Homepage</>
+const HomePage: React.FC = () => {
+  return <>Homepage</>
 }
 
 export default HomePage
