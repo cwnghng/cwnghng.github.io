@@ -4,11 +4,12 @@ const ResumeExperience: React.FC<IProps> = (props: IProps) => {
     duration,
     company,
     companyLink,
-    description,
+    descriptions,
     achievements,
     skills,
     technologies,
     start,
+    space,
   } = props
 
   return (
@@ -30,15 +31,16 @@ const ResumeExperience: React.FC<IProps> = (props: IProps) => {
           </a>
         </div>
         <h6 className="mx-1">{duration}</h6>
-        <h6 className="m-1 my-4 text-justify">{description}</h6>
+        {descriptions.map((description) => (
+          <h6 className="m-1 my-4 text-justify">{description}</h6>
+        ))}
         {achievements && achievements[0] && (
           <div className="my-2">
             <h6 className="m-1 font-bold text-dark">Achievements:</h6>
             <ul className="m-1">
               {achievements.map((achivement) => (
                 <li className="flex items-center ml-4">
-                  <div className="rounded-full bg-slate-700 h-1 w-1 m-1"></div>
-                  <h6>{achivement}</h6>
+                  <h6>• {achivement}</h6>
                 </li>
               ))}
             </ul>
@@ -69,6 +71,7 @@ const ResumeExperience: React.FC<IProps> = (props: IProps) => {
             </div>
           </div>
         )}
+        {space && <div style={{ height: `${space}px` }}></div>}
       </div>
     </div>
   )
@@ -79,11 +82,12 @@ interface IProps {
   duration: string
   company: string
   companyLink?: string
-  description: string
+  descriptions: string[]
   achievements?: string[]
   skills?: string[]
   technologies?: string[]
   start?: boolean
+  space?: number | null
 }
 
 ResumeExperience.defaultProps = {
@@ -92,6 +96,7 @@ ResumeExperience.defaultProps = {
   skills: [],
   technologies: [],
   start: false,
+  space: null,
 }
 
 export const ResumeExperienceSpace: React.FC<{ space: number }> = (
@@ -101,11 +106,13 @@ export const ResumeExperienceSpace: React.FC<{ space: number }> = (
     space: 100,
   },
 ) => {
+  const { space } = props
   return (
     <div className="flex">
       <div className="flex flex-col mr-2 items-center">
         <div className="border-l-2 border-slate-700 h-full"></div>
       </div>
+      <div style={{ height: `${space}px` }}></div>
     </div>
   )
 }

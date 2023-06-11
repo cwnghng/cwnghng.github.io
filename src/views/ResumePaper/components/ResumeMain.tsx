@@ -15,7 +15,7 @@ import { ResumeSkillBar, ResumeSkillBadge } from './ResumeSkill'
 
 const ResumeMain: React.FC = () => {
   return (
-    <div className="grid grid-cols-12 gap-6 px-8 py-4">
+    <div className="grid grid-cols-12 gap-4 px-8 py-4">
       <div className="col-span-8 m-1">
         <div className="text-dark">
           <h4>WORK EXPERIENCE</h4>
@@ -25,13 +25,14 @@ const ResumeMain: React.FC = () => {
           <ResumeExperience
             title={value.title}
             duration={value.duration}
-            description={value.description}
+            descriptions={value.descriptions}
             company={value.company}
             companyLink={value.companyLink}
             achievements={value.achievements}
             skills={value.skills}
             technologies={value.technologies}
             start={index === 0}
+            space={value.space || null}
           />
         ))}
       </div>
@@ -79,6 +80,7 @@ const ResumeMain: React.FC = () => {
               title={value.title}
               school={value.school}
               duration={value.duration}
+              space={value.space || null}
             />
           ))}
         </div>
