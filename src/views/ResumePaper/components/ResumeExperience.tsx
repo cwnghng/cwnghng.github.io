@@ -94,4 +94,20 @@ ResumeExperience.defaultProps = {
   start: false,
 }
 
+export const ResumeExperienceSpace: React.FC<{ space: number }> = (
+  props: {
+    space: number
+  } = {
+    space: 100,
+  },
+) => {
+  return (
+    <div className="flex">
+      <div className="flex flex-col mr-2 items-center">
+        <div className="border-l-2 border-slate-700 h-full"></div>
+      </div>
+    </div>
+  )
+}
+
 export default ResumeExperience
