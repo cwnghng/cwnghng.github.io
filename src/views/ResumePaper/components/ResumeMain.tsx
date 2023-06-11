@@ -1,10 +1,15 @@
 import Divider from '../../../components/Divider'
 import {
+  RESUME_CERTIFICATES,
+  RESUME_EDUCATION,
+  RESUME_INTERESTS,
+  RESUME_LANGUAGES,
   RESUME_SKILLS_BACKEND,
   RESUME_SKILLS_FRONTEND,
   RESUME_SKILLS_OTHERS,
   RESUME_WORK_EXPERIENCE,
 } from '../constants'
+import ResumeEducation from './ResumeEducation'
 import ResumeExperience from './ResumeExperience'
 import { ResumeSkillBar, ResumeSkillBadge } from './ResumeSkill'
 
@@ -35,7 +40,7 @@ const ResumeMain: React.FC = () => {
           <h4>SKILLS</h4>
           <Divider />
           <div className="mt-4 mb-2">
-            <h6 className="font-bold">Frontend</h6>
+            <h6 className="font-bold">Fullstack</h6>
           </div>
           {RESUME_SKILLS_FRONTEND.map((value) => (
             <ResumeSkillBar title={value.title} level={value.level} />
@@ -58,14 +63,45 @@ const ResumeMain: React.FC = () => {
         <div className="text-dark my-4">
           <h4>EDUCATION</h4>
           <Divider />
+          {RESUME_EDUCATION.map((value) => (
+            <ResumeEducation
+              title={value.title}
+              school={value.school}
+              duration={value.duration}
+            />
+          ))}
+        </div>
+        <div className="text-dark my-4">
+          <h4>CERTIFICATES</h4>
+          <Divider />
+          {RESUME_CERTIFICATES.map((value) => (
+            <ResumeEducation
+              title={value.title}
+              school={value.school}
+              duration={value.duration}
+            />
+          ))}
         </div>
         <div className="text-dark my-4">
           <h4>LANGUAGE</h4>
           <Divider />
+          {RESUME_LANGUAGES.map((value) => (
+            <div className="my-1">
+              <h6 className="text-dark">
+                {value.lang}{' '}
+                <span className="text-gray-500">({value.level})</span>
+              </h6>
+            </div>
+          ))}
         </div>
         <div className="text-dark my-4">
           <h4>INTERESTS</h4>
           <Divider />
+          {RESUME_INTERESTS.map((value) => (
+            <div className="my-1">
+              <h6 className="text-dark">{value}</h6>
+            </div>
+          ))}
         </div>
       </div>
     </div>
