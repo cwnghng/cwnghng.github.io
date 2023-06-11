@@ -3,7 +3,7 @@ import ResumeSocialLink from './ResumeSocialLink'
 
 const ResumeHeader: React.FC = () => {
   return (
-    <div className="flex justify-between bg-slate-700 text-light p-8">
+    <div className="flex w-full justify-between bg-slate-700 text-light p-8">
       <div>
         <h2 className="m-1">CHUA WANG HENG</h2>
         <h4 className="m-1">Software Developer</h4>

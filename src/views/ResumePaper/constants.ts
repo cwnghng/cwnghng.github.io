@@ -3,12 +3,12 @@ import { faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export const RESUME_ABSTRACT =
-  "As the Product Manager and Team Lead at The AceMeta Company, I specialize in full-stack development with MERN stacks and the creation of 3D frontend products. My innovative applications focus on discerning trade patterns, and I've recently developed an algorithm for identifying positive forex market expectations. A strong advocate for Web3 as the future of authentication and ownership, I envision its extension beyond Bitcoin to physical goods and agreements."
+  'As the Product Manager and Team Lead at The AceMeta Company, I specialize in full-stack development with MERN stacks, the creation of 3D frontend products, and the development of our physically backed token systems. As a Physics major with an interest in web-based game development and trading, I combine my educational background with my personal interests to create innovative solutions. Known for my quick learning abilities and strong teamwork skills, I am eager to further expand my professional career. Currently, I am working on my own Web3 game-fi project that focuses on integrating real-time strategy and deck building into a board game.'
 
 export const RESUME_SOCIAL_LINKS = [
   {
-    href: 'https://www.linkedin.com/in/wang-heng-chua-86b53a194',
-    value: 'linkedin.com/in/wang-heng-chua-86b53a194',
+    href: 'https://www.linkedin.com/in/chuawangheng',
+    value: 'linkedin.com/in/chuawangheng',
     icon: faLinkedin,
   },
   {
@@ -34,27 +34,48 @@ export const RESUME_CONTACT_INFOS = [
   },
 ]
 
-export const RESUME_WORK_EXPERIENCE = [
+type TResumeWorkExperience = {
+  title: string
+  duration: string
+  descriptions: string[]
+  company: string
+  companyLink?: string
+  achievements?: string[]
+  skills?: string[]
+  technologies?: string[]
+  space?: number
+}[]
+
+export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
   {
     title: 'Team Lead, Software Dev',
     duration: '2022 March - Present',
-    description:
-      "Responsible for the development of the company's metaverse product and any other software the company requires. I am also the key person communicating technical requirements to the 3D assets developed by a studio the company engaged, ensuring that all the assets are well suited for web based applications",
+    descriptions: [
+      'I worked in a team of five to develop a social commerce platform, Labelled.io, using React, NodeJS, AWS EC2, and MongoDB. My primary role encompassed both frontend and backend development, including the development of the NFC security key and the integration of Ecwid and Stripe.',
+      "Developed the company's web based metaverse product as a collaboration with HashkeyDID.",
+    ],
     company: 'The AceMeta Company',
     companyLink: 'https://labelled.io/',
     achievements: [
       'Blackscale launch - successfully launched our first physically backed token',
-      'NFT Asia -',
-      'Sales',
+      'NFT Asia - ran a campaign to showcase our first NFT project - DreamDomain - to other Web3 natives and brands',
     ],
     skills: [],
-    technologies: ['NodeJS', 'Typescript', 'ReactJS', 'ThreeJS', 'AWS'],
+    technologies: [
+      'NodeJS',
+      'Typescript',
+      'ReactJS',
+      'ThreeJS',
+      'AWS',
+      'MongoDB',
+    ],
   },
   {
     title: 'Freelance Trader',
     duration: '2021 August - 2022 March',
-    description:
+    descriptions: [
       'Conducted research and development on an automatic trading algorithm primarily targeting forex trading, as well as development of trade management tools. The trading algorithm focused on adapting and reinventing technical analysis based on mathematical models.',
+    ],
     company: 'Self-employed',
     companyLink: '',
     achievements: [],
@@ -64,19 +85,22 @@ export const RESUME_WORK_EXPERIENCE = [
   {
     title: 'Laboratory Technician',
     duration: '2020 September - 2022 March',
-    description:
+    descriptions: [
       'A BSL-3 clinical diagnostics facility primary focused on processing Covid-19 samples. As the lab technician, I am responsible for the samples processing and analysis as well as stock management. I am experienced with manual sample processing and is consistent with sample quality, managing to prevent and evade contaminations that would otherwise render the result unusable.',
+    ],
     company: 'DSO National Laboratories',
     companyLink: 'https://www.dso.org.sg/',
     achievements: [],
     skills: [],
     technologies: [],
+    // space: 50
   },
   {
     title: 'Freelance Photographer',
     duration: '2017 May - 2019 June',
-    description:
+    descriptions: [
       "As a freelancer, I focus on event and wedding photography as well as conducting some marketing. I am a great listener, always engaging and working closely with my clients to understand their requests and requirements for their photoshoots. During the shoots, I also focused on talking to and entertaining guests. I believe a great service is not in just in the quantity and quality of photos taken, but also the guests' experience as a whole.",
+    ],
     company: 'Self-employed',
     companyLink: '',
     achievements: [],
@@ -86,8 +110,9 @@ export const RESUME_WORK_EXPERIENCE = [
   {
     title: 'Associate Photographer',
     duration: '2017 May - 2019 June',
-    description:
+    descriptions: [
       'As an associate photographer, I helped the company engage clients, conduct shoots for weddings and corporate events as well as aided in several product photography. I am very experienced with photography on the go, capable of capturing high quantity of unique photographs with little to no edits in post. I have been noted and complimented by guests for my jovial and hardworking nature and have been well liked by my colleagues.',
+    ],
     company: 'LiveMoments',
     companyLink: 'https://www.livemoments.com.sg/',
     achievements: [],
@@ -146,9 +171,17 @@ export const RESUME_SKILLS_OTHERS = [
   'TDD',
   'Jira',
   'ExpressJS',
+  'Agile',
 ]
 
-export const RESUME_EDUCATION = [
+type TResumeEducation = {
+  title: string
+  school: string
+  duration: string
+  space?: number
+}[]
+
+export const RESUME_EDUCATION: TResumeEducation = [
   {
     title: 'BSc Physics',
     school: 'National University of Singapore',
@@ -161,7 +194,7 @@ export const RESUME_EDUCATION = [
   },
 ]
 
-export const RESUME_CERTIFICATES = [
+export const RESUME_CERTIFICATES: TResumeEducation = [
   {
     title: 'NGINX Fundamentals: High Performance Servers from Scratch',
     school: 'Udemy',
@@ -171,6 +204,7 @@ export const RESUME_CERTIFICATES = [
     title: 'Three.js and Typescript',
     school: 'Udemy',
     duration: 'Dec 2020',
+    // space: 67
   },
   {
     title: 'The Advanced Web Developer Bootcamp',
