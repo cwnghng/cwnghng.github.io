@@ -16,11 +16,11 @@ export const RESUME_SOCIAL_LINKS = [
     value: 'github.com/cwnghng',
     icon: faGithub,
   },
-  {
-    href: 'https://cwnghng.github.io',
-    value: 'cwnghng.github.io',
-    icon: faGlobe,
-  },
+  // {
+  //   href: 'https://cwnghng.github.io',
+  //   value: 'cwnghng.github.io',
+  //   icon: faGlobe,
+  // },
 ]
 
 export const RESUME_CONTACT_INFOS = [
