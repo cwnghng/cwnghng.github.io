@@ -3,7 +3,7 @@ import { faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export const RESUME_ABSTRACT =
-  'As the Product Manager and Team Lead at The AceMeta Company, I specialize in full-stack development with MERN stacks, the creation of 3D frontend products, and the development of our physically backed token systems. As a Physics major with an interest in web-based game development and trading, I combine my educational background with my personal interests to create innovative solutions. Known for my quick learning abilities and strong teamwork skills, I am eager to further expand my professional career. Currently, I am working on my own Web3 game-fi project that focuses on integrating real-time strategy and deck building into a board game.'
+  'As the Fullstack Engineer in the AI team at Crypto.com, I assist in various AI projects. I am known for my quick learning abilities and strong teamwork skills. Currently, I am leveraging on my skills picked up in Crypto.com to create an AI chatbot of myself, capable of mimicking my speech patterns while having knowledge of my social connections. Eager to continue my professional growth, I am committed to exploring new frontiers in AI and full-stack development, constantly seeking opportunities to leverage my skills in creating cutting-edge solutions that drive forward the digital landscape.'
 
 export const RESUME_SOCIAL_LINKS = [
   {
@@ -48,8 +48,32 @@ type TResumeWorkExperience = {
 
 export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
   {
+    title: 'Full Stack Engineer',
+    duration: '2023 Oct - Present',
+    descriptions: [
+      'I work with a large team of developers that focuses on the development of AI based products. My primary project is the development of a LLM powered ad generator tool capable of automating the creation of ad copies and images. I also assist in the fullstack development of other projects as well as the research into new areas of interest.',
+      'Maintained close working relations with different departments to understand their needs and requirements, and to provide them with the best possible solutions.',
+    ],
+    company: 'Crypto.com',
+    companyLink: 'https://crypto.com',
+    achievements: [
+      'AI Ad Generator - launched an internal tool that will help different departments generate ads for their products in significantly shorter time, cutting ad costs and improved conversion rates of the ads',
+      'Ava Signals - a market signal tool that was deployed and integrated into Crypto.com App',
+      'VAIB - an AI based social media platform that houses hundreds of AI influencers capable of chatting with users and generating its own image content',
+    ],
+    skills: [],
+    technologies: [
+      'NodeJS',
+      'AWS',
+      'PostgreSQL',
+      'OpenAI',
+      'Flask',
+      'Redis',
+    ],
+  },
+  {
     title: 'Team Lead, Software Dev',
-    duration: '2022 March - Present',
+    duration: '2022 March - 2023 Oct',
     descriptions: [
       'I worked in a team of five to develop a social commerce platform, Labelled.io, using React, NodeJS, AWS EC2, and MongoDB. My primary role encompassed both frontend and backend development, including the development of the NFC security key and the integration of Ecwid and Stripe.',
       "Developed the company's web based metaverse product as a collaboration with HashkeyDID.",
@@ -63,12 +87,12 @@ export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
     skills: [],
     technologies: [
       'NodeJS',
-      'Typescript',
       'ReactJS',
       'ThreeJS',
       'AWS',
       'MongoDB',
     ],
+    space: 40,
   },
   {
     title: 'Freelance Trader',
@@ -93,47 +117,50 @@ export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
     achievements: [],
     skills: [],
     technologies: [],
-    // space: 50
   },
-  {
-    title: 'Freelance Photographer',
-    duration: '2017 May - 2019 June',
-    descriptions: [
-      "As a freelancer, I focus on event and wedding photography as well as conducting some marketing. I am a great listener, always engaging and working closely with my clients to understand their requests and requirements for their photoshoots. During the shoots, I also focused on talking to and entertaining guests. I believe a great service is not in just in the quantity and quality of photos taken, but also the guests' experience as a whole.",
-    ],
-    company: 'Self-employed',
-    companyLink: '',
-    achievements: [],
-    skills: [],
-    technologies: ['Adobe Lightroom', 'Adobe Photoshop'],
-  },
-  {
-    title: 'Associate Photographer',
-    duration: '2017 May - 2019 June',
-    descriptions: [
-      'As an associate photographer, I helped the company engage clients, conduct shoots for weddings and corporate events as well as aided in several product photography. I am very experienced with photography on the go, capable of capturing high quantity of unique photographs with little to no edits in post. I have been noted and complimented by guests for my jovial and hardworking nature and have been well liked by my colleagues.',
-    ],
-    company: 'LiveMoments',
-    companyLink: 'https://www.livemoments.com.sg/',
-    achievements: [],
-    skills: [],
-    technologies: ['Adobe Lightroom', 'Adobe Photoshop'],
-  },
+  // {
+  //   title: 'Freelance Photographer',
+  //   duration: '2017 May - 2019 June',
+  //   descriptions: [
+  //     "As a freelancer, I focus on event and wedding photography as well as conducting some marketing. I am a great listener, always engaging and working closely with my clients to understand their requests and requirements for their photoshoots. During the shoots, I also focused on talking to and entertaining guests. I believe a great service is not in just in the quantity and quality of photos taken, but also the guests' experience as a whole.",
+  //   ],
+  //   company: 'Self-employed',
+  //   companyLink: '',
+  //   achievements: [],
+  //   skills: [],
+  //   technologies: ['Adobe Lightroom', 'Adobe Photoshop'],
+  // },
+  // {
+  //   title: 'Associate Photographer',
+  //   duration: '2017 May - 2019 June',
+  //   descriptions: [
+  //     'As an associate photographer, I helped the company engage clients, conduct shoots for weddings and corporate events as well as aided in several product photography. I am very experienced with photography on the go, capable of capturing high quantity of unique photographs with little to no edits in post. I have been noted and complimented by guests for my jovial and hardworking nature and have been well liked by my colleagues.',
+  //   ],
+  //   company: 'LiveMoments',
+  //   companyLink: 'https://www.livemoments.com.sg/',
+  //   achievements: [],
+  //   skills: [],
+  //   technologies: ['Adobe Lightroom', 'Adobe Photoshop'],
+  // },
 ]
 
 export const RESUME_SKILLS_FRONTEND = [
   {
     title: 'React',
+    level: 0.9,
+  },
+  {
+    title: 'NextJS',
     level: 0.85,
   },
   {
     title: 'Typescript',
     level: 0.9,
   },
-  {
-    title: 'HTML/CSS',
-    level: 0.95,
-  },
+  // {
+  //   title: 'HTML/CSS',
+  //   level: 0.95,
+  // },
   {
     title: 'ThreeJS',
     level: 0.85,
@@ -150,7 +177,7 @@ export const RESUME_SKILLS_BACKEND = [
     level: 0.85,
   },
   {
-    title: 'MySQL',
+    title: 'PostgreSQL',
     level: 0.8,
   },
 ]
@@ -172,6 +199,11 @@ export const RESUME_SKILLS_OTHERS = [
   'Jira',
   'ExpressJS',
   'Agile',
+  'OpenAI',
+  'Flask',
+  'Langchain',
+  'Redis',
+  'Google Cloud',
 ]
 
 type TResumeEducation = {
@@ -204,7 +236,7 @@ export const RESUME_CERTIFICATES: TResumeEducation = [
     title: 'Three.js and Typescript',
     school: 'Udemy',
     duration: 'Dec 2020',
-    // space: 67
+    space: 67
   },
   {
     title: 'The Advanced Web Developer Bootcamp',
