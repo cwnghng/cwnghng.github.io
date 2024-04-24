@@ -1,5 +1,5 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export const RESUME_ABSTRACT =
@@ -62,14 +62,7 @@ export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
       'VAIB - an AI based social media platform that houses hundreds of AI influencers capable of chatting with users and generating its own image content',
     ],
     skills: [],
-    technologies: [
-      'NodeJS',
-      'AWS',
-      'PostgreSQL',
-      'OpenAI',
-      'Flask',
-      'Redis',
-    ],
+    technologies: ['NodeJS', 'AWS', 'PostgreSQL', 'OpenAI', 'Flask', 'Redis'],
   },
   {
     title: 'Team Lead, Software Dev',
@@ -85,14 +78,8 @@ export const RESUME_WORK_EXPERIENCE: TResumeWorkExperience = [
       'NFT Asia - ran a campaign to showcase our first NFT project - DreamDomain - to other Web3 natives and brands',
     ],
     skills: [],
-    technologies: [
-      'NodeJS',
-      'ReactJS',
-      'ThreeJS',
-      'AWS',
-      'MongoDB',
-    ],
-    space: 40,
+    technologies: ['NodeJS', 'ReactJS', 'ThreeJS', 'AWS', 'MongoDB'],
+    // space: 40,
   },
   {
     title: 'Freelance Trader',
@@ -236,7 +223,7 @@ export const RESUME_CERTIFICATES: TResumeEducation = [
     title: 'Three.js and Typescript',
     school: 'Udemy',
     duration: 'Dec 2020',
-    space: 67
+    // space: 67,
   },
   {
     title: 'The Advanced Web Developer Bootcamp',
@@ -265,4 +252,4 @@ export const RESUME_LANGUAGES = [
   },
 ]
 
-export const RESUME_INTERESTS = ['Gaming', 'Game Development']
+export const RESUME_INTERESTS = ['Gaming', 'Game Development', 'AI']
