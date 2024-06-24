@@ -3,7 +3,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export const RESUME_ABSTRACT =
-  'As the Fullstack Engineer in the AI team at Crypto.com, I assist in various AI projects. I am known for my quick learning abilities and strong teamwork skills. Currently, I am leveraging on my skills picked up in Crypto.com to create an AI chatbot of myself, capable of mimicking my speech patterns while having knowledge of my social connections. Eager to continue my professional growth, I am committed to exploring new frontiers in AI and full-stack development, constantly seeking opportunities to leverage my skills in creating cutting-edge solutions that drive forward the digital landscape.'
+  'As the Fullstack Engineer in the AI team at Crypto.com, I assist in various AI projects. I am known for my quick learning abilities and strong teamwork skills. Currently, I am leveraging on my skills picked up in Crypto.com and introduce generative AI to my personal projects - to reduce development time on designing intricate flows and calculations by using AI instead. Eager to continue my professional growth, I am committed to exploring new frontiers in AI and full-stack development, constantly seeking opportunities to leverage my skills in creating cutting-edge solutions that drive forward the digital landscape.'
 
 export const RESUME_SOCIAL_LINKS = [
   {
@@ -253,3 +253,35 @@ export const RESUME_LANGUAGES = [
 ]
 
 export const RESUME_INTERESTS = ['Gaming', 'Game Development', 'AI']
+
+type TPesonalProjects = {
+  title: string
+  descriptions: string[]
+  technologies?: string[]
+  space?: number
+}[]
+
+export const RESUME_PERSONAL_PROJECTS: TPesonalProjects = [
+  {
+    title: 'Forex Signals Bot',
+    descriptions: [
+      'A bot that scans the chat for signals and immediately notify users through a telegram chat. The bot also checks the news for any major events that might affect the market and notify users of the event.',
+    ],
+    technologies: ['Python', 'MongoDB', 'OpenAI'],
+  },
+  {
+    title: 'Butler.events',
+    descriptions: [
+      'A platform that connects event organisers with venues and vendors. Working together with an events broker and product manager to develop the platform.',
+    ],
+    technologies: ['NodeJS', 'NextJS', 'AWS', 'MongoDB'],
+    // space: 40,
+  },
+  {
+    title: 'Social Pet Game',
+    descriptions: [
+      'A game that allows users to care for a virtual pet. The user can feed, play, and train the pet, and the states of the pet will change based on the user actions. The user may also share the pet with other users',
+    ],
+    technologies: ['NodeJS', 'React', 'MongoDB'],
+  },
+]

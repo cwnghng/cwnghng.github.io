@@ -4,6 +4,7 @@ import {
   RESUME_EDUCATION,
   RESUME_INTERESTS,
   RESUME_LANGUAGES,
+  RESUME_PERSONAL_PROJECTS,
   RESUME_SKILLS_BACKEND,
   RESUME_SKILLS_FRONTEND,
   RESUME_SKILLS_OTHERS,
@@ -11,6 +12,7 @@ import {
 } from '../constants'
 import ResumeEducation from './ResumeEducation'
 import ResumeExperience from './ResumeExperience'
+import ResumePersonalProjects from './ResumePersonalProjects'
 import { ResumeSkillBar, ResumeSkillBadge } from './ResumeSkill'
 
 const ResumeMain: React.FC = () => {
@@ -30,6 +32,19 @@ const ResumeMain: React.FC = () => {
             companyLink={value.companyLink}
             achievements={value.achievements}
             skills={value.skills}
+            technologies={value.technologies}
+            start={index === 0}
+            space={value.space || null}
+          />
+        ))}
+        <div className="text-dark mt-8">
+          <h4>PERSONAL PROJECTS</h4>
+          <Divider />
+        </div>
+        {RESUME_PERSONAL_PROJECTS.map((value, index) => (
+          <ResumePersonalProjects
+            title={value.title}
+            descriptions={value.descriptions}
             technologies={value.technologies}
             start={index === 0}
             space={value.space || null}
