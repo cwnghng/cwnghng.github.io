@@ -1,7 +1,7 @@
 .a4-page {
   width: 210mm;
   /* height: 297mm; */
-  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   padding: 0mm; /* Optional, for inner margins */
   margin: auto; /* Center the page on the screen */
 }
